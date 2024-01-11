@@ -1,0 +1,13 @@
+@RestController
+@RequestMapping("/api")
+public class MyController {
+
+    @GetMapping("/example")
+    public ResponseEntity<String> getExample() {
+        // Some logic to determine the response data
+        String responseData = "Hello, World!";
+        
+        // Build and return a ResponseEntity with the response data, status, and headers
+        return new ResponseEntity<>(responseData, HttpStatus.OK);
+    }
+}
